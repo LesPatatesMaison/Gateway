@@ -1,13 +1,12 @@
 # Application Name
-spring.application.name = gateway
-
-########################################################
-
-# Get config from Server Config
-spring.config.import=optional:configserver:http://localhost:8888
-spring.cloud.config.label=master
-
-########################################################
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      label: master
 
 # Config for LoadBalancing
 #spring.cloud.gateway.routes[0].id = lb_route
